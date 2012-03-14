@@ -3,7 +3,7 @@ This source code covers a lot of Extjs 4 especially MVC architecture, Stores, Mo
 
 Here are the instructions:
 
-1) Unzip CRUD_Extjs4.zip to your web environment
-2)Create Mysql Database: CRUD_Extjs4
-3)Execute the sql file: CRUD_Extjs4.sql in the database.
-4)Run CRUD_Extjs4 on your server. :)
+1) Unzip CRUD_Extjs4.zip to your web environment<br />
+2)Create Mysql Database: CRUD_Extjs4<br />
+3)Execute the sql file: CRUD_Extjs4.sql in the database.<br />
+4)Run CRUD_Extjs4 on your server. :)<br />

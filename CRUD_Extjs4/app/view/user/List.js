@@ -5,18 +5,23 @@ Ext.define('UserApp.view.user.List' ,{
     store: 'User',
     title : 'Users',
     dockedItems: [{
-                xtype: 'toolbar',
-                items: [{
-                    iconCls: 'user_add',
-                    text: 'Add',
-                    action: 'addUser'
-                }, {
-                    iconCls: 'user_delete',
-                    text: 'Delete',
-                    disabled: true,
-                    itemId: 'deleteUser',
-                    action: 'delete'
-                }]
+        xtype: 'toolbar',
+        items: [{
+            iconCls: 'user_add',
+            text: 'Add',
+            action: 'addUser'
+        }, {
+            iconCls: 'user_delete',
+            text: 'Delete',
+            disabled: true,
+            itemId: 'deleteUser',
+            action: 'delete'
+        }]
+    },{
+        xtype: 'pagingtoolbar',
+        store: 'User',   // mismo que el store GridPanel
+        dock: 'bottom',
+        displayInfo: true
     }],
     initComponent: function() {
 

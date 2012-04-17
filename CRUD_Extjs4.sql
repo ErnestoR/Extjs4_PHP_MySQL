@@ -33,6 +33,16 @@ CREATE TABLE `Users` (
 --  Records of `Users`
 -- ----------------------------
 BEGIN;
-INSERT INTO `Users` VALUES ('1', 'Ernesto', 'Ramirez', '23'), ('2', 'Maria', 'Hurtado', '22');
+INSERT INTO `Users` VALUES 
+	('1', 'Ernesto', 'Ramirez', '23'), 
+	('2', 'Maria', 'Hurtado', '23'), 
+	('3', 'Jonathan', 'Caballero', '28'), 
+	('4', 'Susana', 'Villal', '25'), 
+	('5', 'Eduardo', 'edd', '21'), 
+	('6', 'Blanca', 'Rodriguez', '27'), 
+	('7', 'Javier', 'Ramirez', '32'), 
+	('8', 'Extjs', 'Sencha', '7'), 
+	('9', 'Touch', 'Sencha', '2'), 
+	('10', 'Architect', 'Sencha', '1');
 COMMIT;
 

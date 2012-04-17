@@ -9,12 +9,22 @@ class User
 		var $userID;
 		var $name;
 		var $lastname;
-                var $age;
+        var $age;
 }
 //Make DB connection
 require_once('database_connection.php');
 //Query BD
-$result = mysql_query("SELECT * FROM Users");
+if(isset($_GET['start']))
+    $offset = $_GET['start'];
+else
+    $offset = 0;
+
+$limit = $_GET['limit'];
+
+$result = mysql_query("SELECT * FROM Users LIMIT $offset, $limit");
+$totalquery = mysql_query("SELECT COUNT(*) FROM Users");
+$total = mysql_fetch_array($totalquery);
+$total =($total[0]);
 $query_array=array();
 $i=0;
 //Iterate all Select
@@ -38,6 +48,7 @@ mysql_close($con);
 $res = new Response();
 $res->success = true;
 $res->message = "Loaded data";
+$res->total = $total;
 $res->data = $query_array;
 //Printing json ARRAY
 print_r($res->to_json());
